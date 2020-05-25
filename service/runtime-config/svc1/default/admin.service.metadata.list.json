@@ -205,5 +205,62 @@
       "type": "LibraryManagementService",
       "libraryDirectory": "${WEAVE_HOME}/service/library/extra"
     }
+  },
+  {
+    "path": "/management/openapi/list",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "action",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "type",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "OpenAPISpecService",
+      "serviceMetadataRegistries": [
+        "admin.service.metadata.registry",
+        "io.aftersound.weave.service.ServiceMetadataRegistry"
+      ]
+    }
   }
 ]

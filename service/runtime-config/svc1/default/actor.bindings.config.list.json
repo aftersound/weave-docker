@@ -62,7 +62,8 @@
     "scenario": "admin.service.executor.types",
     "baseType": "io.aftersound.weave.service.ServiceExecutor",
     "extensionTypes": [
-      "io.aftersound.weave.service.management.library.LibraryManagementServiceExecutor"
+      "io.aftersound.weave.service.management.library.LibraryManagementServiceExecutor",
+      "io.aftersound.weave.service.openapi.OpenAPISpecServiceExecutor"
     ]
   },
   {

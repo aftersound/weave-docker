@@ -57,6 +57,17 @@
     "extensionTypes" : [ "io.aftersound.weave.couchbase2x.CouchbaseClusterFactory", "io.aftersound.weave.couchbase2x.CouchbaseBucketFactory" ]
   } ]
 }, {
+  "path" : "service-executor-management-rtc-cb2x-based-0.0.1-SNAPSHOT.jar",
+  "description" : {
+    "groupId" : "io.aftersound.weave",
+    "artifactId" : "service-executor-management-rtc-cb2x-based",
+    "version" : "0.0.1-SNAPSHOT"
+  },
+  "extensions" : [ {
+    "baseType" : "io.aftersound.weave.service.ServiceExecutor",
+    "extensionTypes" : [ "io.aftersound.weave.service.management.cb2x.NamespaceManagementServiceExecutor", "io.aftersound.weave.service.management.cb2x.RuntimeConfigManagementServiceExecutor" ]
+  } ]
+}, {
   "path" : "service-executor-openapi-0.0.1-SNAPSHOT.jar",
   "description" : {
     "groupId" : "io.aftersound.weave",
@@ -65,6 +76,6 @@
   },
   "extensions" : [ {
     "baseType" : "io.aftersound.weave.service.ServiceExecutor",
-    "extensionTypes" : [ "io.aftersound.weave.service.management.openapi.OpenAPISpecServiceExecutor" ]
+    "extensionTypes" : [ "io.aftersound.weave.service.openapi.OpenAPISpecServiceExecutor" ]
   } ]
 } ]
