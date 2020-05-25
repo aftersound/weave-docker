@@ -1,0 +1,209 @@
+[
+  {
+    "path": "/management/library/install",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "action",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "repository",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "groupId",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "artifactId",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "version",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "LibraryManagementService",
+      "libraryDirectory": "${WEAVE_HOME}/service/library/extra"
+    }
+  },
+  {
+    "path": "/management/library/list",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "action",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "groupId",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "artifactId",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "version",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "LibraryManagementService",
+      "libraryDirectory": "${WEAVE_HOME}/service/library/extra"
+    }
+  },
+  {
+    "path": "/management/library/uninstall",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "action",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "repository",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "groupId",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "artifactId",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "version",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "LibraryManagementService",
+      "libraryDirectory": "${WEAVE_HOME}/service/library/extra"
+    }
+  }
+]
