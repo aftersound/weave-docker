@@ -1,0 +1,28 @@
+[
+  {
+    "resourceManager": "io.aftersound.weave.service.openapi.OpenAPIResourceManager",
+    "dependingResourceTypes": [
+      {
+        "name": "admin.service.metadata.registry",
+        "type": "io.aftersound.weave.service.ServiceMetadataRegistry"
+      },
+      {
+        "name": "io.aftersound.weave.service.ServiceMetadataRegistry",
+        "type": "io.aftersound.weave.service.ServiceMetadataRegistry"
+      }
+    ]
+  },
+  {
+    "resourceManager": "io.aftersound.weave.service.couchbase2x.ServiceResourceManager",
+    "dependingResourceTypes": [
+      {
+        "name": "admin.client.registry",
+        "type": "io.aftersound.weave.client.ClientRegistry"
+      },
+      {
+        "name": "io.aftersound.weave.client.ClientRegistry",
+        "type": "io.aftersound.weave.client.ClientRegistry"
+      }
+    ]
+  }
+]

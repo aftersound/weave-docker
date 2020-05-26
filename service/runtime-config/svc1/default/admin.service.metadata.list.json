@@ -262,5 +262,77 @@
         "io.aftersound.weave.service.ServiceMetadataRegistry"
       ]
     }
+  },
+  {
+    "path": "/management/couchbase",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "action",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        },
+        "validation": {
+          "type": "AllowedValues",
+          "valueSet": [
+            "upsert",
+            "get",
+            "remove",
+            "bulkupsert",
+            "bulkget",
+            "bulkremove"
+          ]
+        }
+      },
+      {
+        "name": "id",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "document",
+        "valueType": "com.fasterxml.jackson.databind.JsonNode",
+        "multiValued": false,
+        "type": "Body",
+        "constraint": {
+          "type": "Optional"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "Couchbase2xDocumentManagementService",
+      "clientRegistries": [
+        "admin.client.registry",
+        "io.aftersound.weave.client.ClientRegistry"
+      ],
+      "repository": {
+        "accessControl": {
+        }
+      }
+    }
   }
 ]
