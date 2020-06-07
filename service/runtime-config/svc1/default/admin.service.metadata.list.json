@@ -207,63 +207,6 @@
     }
   },
   {
-    "path": "/management/openapi/list",
-    "paramFields": [
-      {
-        "name": "path1",
-        "valueType": "String",
-        "multiValued": false,
-        "type": "Path",
-        "constraint": {
-          "type": "Required"
-        }
-      },
-      {
-        "name": "path2",
-        "valueType": "String",
-        "multiValued": false,
-        "type": "Path",
-        "constraint": {
-          "type": "Required"
-        }
-      },
-      {
-        "name": "action",
-        "valueType": "String",
-        "multiValued": false,
-        "type": "Path",
-        "constraint": {
-          "type": "Required"
-        }
-      },
-      {
-        "name": "path",
-        "valueType": "String",
-        "multiValued": true,
-        "type": "Query",
-        "constraint": {
-          "type": "Optional"
-        }
-      },
-      {
-        "name": "type",
-        "valueType": "String",
-        "multiValued": true,
-        "type": "Query",
-        "constraint": {
-          "type": "Optional"
-        }
-      }
-    ],
-    "executionControl": {
-      "type": "OpenAPISpecService",
-      "serviceMetadataRegistries": [
-        "admin.service.metadata.registry",
-        "io.aftersound.weave.service.ServiceMetadataRegistry"
-      ]
-    }
-  },
-  {
     "path": "/management/couchbase",
     "paramFields": [
       {
@@ -333,6 +276,212 @@
         "accessControl": {
         }
       }
+    }
+  },
+  {
+    "path": "management/discovery/service",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path3",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "type",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "ServiceMetadataService",
+      "serviceMetadataRegistries": [
+        "admin.service.metadata.registry"
+      ]
+    }
+  },
+  {
+    "path": "management/discovery/openapi",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path3",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "type",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "OpenAPISpecService",
+      "serviceMetadataRegistries": [
+        "admin.service.metadata.registry"
+      ]
+    }
+  },
+  {
+    "path": "discovery/service",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "type",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "ServiceMetadataService",
+      "serviceMetadataRegistries": [
+        "io.aftersound.weave.service.ServiceMetadataRegistry"
+      ]
+    }
+  },
+  {
+    "path": "discovery/openapi",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "type",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "OpenAPISpecService",
+      "serviceMetadataRegistries": [
+        "io.aftersound.weave.service.ServiceMetadataRegistry"
+      ]
     }
   }
 ]

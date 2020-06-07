@@ -8,6 +8,20 @@
     ]
   },
   {
+    "scenario": "codec.factory.types",
+    "baseType": "io.aftersound.weave.codec.CodecFactory",
+    "extensionTypes": [
+      "io.aftersound.weave.codec.avro.BySchemaIdGenericRecordBinaryCodecFactory",
+      "io.aftersound.weave.codec.avro.BySchemaIdGenericRecordJsonCodecFactory",
+      "io.aftersound.weave.codec.avro.BySchemaNameGenericRecordBinaryCodecFactory",
+      "io.aftersound.weave.codec.avro.BySchemaNameGenericRecordJsonCodecFactory",
+      "io.aftersound.weave.jackson.ByClassJsonCodecFactory",
+      "io.aftersound.weave.jackson.ByClassSmileCodecFactory",
+      "io.aftersound.weave.jackson.JsonNodeJsonCodecFactory",
+      "io.aftersound.weave.codec.cls.JavaClassCodecFactory"
+    ]
+  },
+  {
     "scenario": "cache.factory.types",
     "baseType": "io.aftersound.weave.service.cache.CacheFactory",
     "extensionTypes": [
@@ -30,8 +44,9 @@
     "scenario": "param.deriver.types",
     "baseType": "io.aftersound.weave.service.request.Deriver",
     "extensionTypes": [
-      "io.aftersound.weave.service.request.MappingDeriver",
-      "io.aftersound.weave.service.request.AliasDeriver"
+      "io.aftersound.weave.service.request.AliasDeriver",
+      "io.aftersound.weave.service.request.Base64Deriver",
+      "io.aftersound.weave.service.request.MappingDeriver"
     ]
   },
   {
@@ -63,7 +78,8 @@
     "baseType": "io.aftersound.weave.service.ServiceExecutor",
     "extensionTypes": [
       "io.aftersound.weave.service.management.library.LibraryManagementServiceExecutor",
-      "io.aftersound.weave.service.openapi.OpenAPISpecServiceExecutor",
+      "io.aftersound.weave.service.discovery.OpenAPISpecServiceExecutor",
+      "io.aftersound.weave.service.discovery.ServiceMetadataServiceExecutor",
       "io.aftersound.weave.service.couchbase2x.DocumentManagementServiceExecutor"
     ]
   },
@@ -77,9 +93,10 @@
     "scenario": "service.executor.types",
     "baseType": "io.aftersound.weave.service.ServiceExecutor",
     "extensionTypes": [
-      "io.aftersound.weave.service.sample.GreetingServiceExecutor",
+      "io.aftersound.weave.service.cassandra3x.SessionFacadeServiceExecutor",
+      "io.aftersound.weave.service.couchbase2x.CouchbaseServiceExecutor",
       "io.aftersound.weave.service.demo.DemoServiceExecutor",
-      "io.aftersound.weave.service.couchbase2x.CouchbaseServiceExecutor"
+      "io.aftersound.weave.service.sample.GreetingServiceExecutor"
     ]
   }
 ]
