@@ -1,0 +1,487 @@
+[
+  {
+    "path": "/management/library/install",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "action",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "repository",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "groupId",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "artifactId",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "version",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "LibraryManagementService",
+      "libraryDirectory": "${WEAVE_HOME}/service/library/extra"
+    }
+  },
+  {
+    "path": "/management/library/list",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "action",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "groupId",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "artifactId",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "version",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "LibraryManagementService",
+      "libraryDirectory": "${WEAVE_HOME}/service/library/extra"
+    }
+  },
+  {
+    "path": "/management/library/uninstall",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "action",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "repository",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "groupId",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "artifactId",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "version",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "LibraryManagementService",
+      "libraryDirectory": "${WEAVE_HOME}/service/library/extra"
+    }
+  },
+  {
+    "path": "/management/couchbase",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "action",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        },
+        "validation": {
+          "type": "AllowedValues",
+          "valueSet": [
+            "upsert",
+            "get",
+            "remove",
+            "bulkupsert",
+            "bulkget",
+            "bulkremove"
+          ]
+        }
+      },
+      {
+        "name": "id",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "document",
+        "valueType": "com.fasterxml.jackson.databind.JsonNode",
+        "multiValued": false,
+        "type": "Body",
+        "constraint": {
+          "type": "Optional"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "Couchbase2xDocumentManagementService",
+      "clientRegistries": [
+        "admin.client.registry",
+        "io.aftersound.weave.client.ClientRegistry"
+      ],
+      "repository": {
+        "accessControl": {
+        }
+      }
+    }
+  },
+  {
+    "path": "management/discovery/service",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path3",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "type",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "ServiceMetadataService",
+      "serviceMetadataRegistries": [
+        "admin.service.metadata.registry"
+      ]
+    }
+  },
+  {
+    "path": "management/discovery/openapi",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path3",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "type",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "OpenAPISpecService",
+      "serviceMetadataRegistries": [
+        "admin.service.metadata.registry"
+      ]
+    }
+  },
+  {
+    "path": "discovery/service",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "type",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "ServiceMetadataService",
+      "serviceMetadataRegistries": [
+        "io.aftersound.weave.service.ServiceMetadataRegistry"
+      ]
+    }
+  },
+  {
+    "path": "discovery/openapi",
+    "paramFields": [
+      {
+        "name": "path1",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path2",
+        "valueType": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "path",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      },
+      {
+        "name": "type",
+        "valueType": "String",
+        "multiValued": true,
+        "type": "Query",
+        "constraint": {
+          "type": "Optional"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "OpenAPISpecService",
+      "serviceMetadataRegistries": [
+        "io.aftersound.weave.service.ServiceMetadataRegistry"
+      ]
+    }
+  }
+]
