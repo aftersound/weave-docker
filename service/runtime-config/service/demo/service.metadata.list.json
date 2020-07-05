@@ -145,26 +145,31 @@
       "repository": {
         "clientId": "test.beer-sample",
         "accessControl": {
-          "n1ql.timeout": 50
+          "n1ql.timeout": "500"
         }
       },
       "byN1QL": {
         "n1qlTemplate": {
-          "template": "select `beer-sample`.* from `beer-sample` WHERE @{TYPE}@{COUNTRY}@{STATE}@{ZIPCODE}@{NAME} LIMIT @{fetchCount} OFFSET @{skipCount}",
+          "optionalVariables": ["country", "state", "zipcode", "name", "category"],
+          "template": "select `beer-sample`.* from `beer-sample` WHERE @{TYPE}@{COUNTRY}@{STATE}@{ZIPCODE}@{NAME}@{CATEGORY} LIMIT @{fetchCount} OFFSET @{skipCount}",
           "elements": {
-            "selector": "@if{type=='brewery'}brewery@else{}beer@end{}",
+            "selector": "@if{type=='brewery'}brewery@else{}BEER@end{}",
             "choices": {
-              "brewery": {
+              "BREWERY": {
                 "TYPE": "`type`='brewery'",
-                "COUNTRY": "@if{country != null && country != ''}`country` like '%@{country}%'@end{}",
-                "STATE": "@if{state != null && state != ''}`state` like '%@{state}%'@end{}",
-                "ZIPCODE": "@if{zipcode != null && zipcode != ''}`code` like '%@{zipcode}%'@end{}",
-                "NAME": "@if{name != null && name != ''}`name` like '%@{name}%'@end{}"
+                "COUNTRY": "@if{country != null && country != ''} AND `country` like '%@{country}%'@end{}",
+                "STATE": "@if{state != null && state != ''} AND `state` like '%@{state}%'@end{}",
+                "ZIPCODE": "@if{zipcode != null && zipcode != ''} AND `code` like '%@{zipcode}%'@end{}",
+                "CATEGORY": "",
+                "NAME": "@if{name != null && name != ''} AND `name` like '%@{name}%'@end{}"
               },
-              "beer": {
+              "BEER": {
                 "TYPE": "`type`='beer'",
-                "COUNTRY": "@if{country != null && country != ''}`country` like '%@{country}%'@end{}",
-                "NAME": "@if{name != null && name != ''}`name` like '%@{name}%'@end{}"
+                "COUNTRY": "",
+                "STATE": "",
+                "ZIPCODE": "",
+                "CATEGORY": "@if{category != null && category != ''} AND `category` like '%@{category}%'@end{}",
+                "NAME": "@if{name != null && name != ''} AND `name` like '%@{name}%'@end{}"
               }
             }
           }
@@ -172,8 +177,8 @@
         "schema": {
           "selector": "@if{type=='brewery'}BREWERY@else{}BEER@end{}",
           "choices": {
-            "BREWERY": "JsonDocument(JacksonCodec(io.aftersound.weave.schema.samples.Brewery,JSON))",
-            "BEER": "JsonDocument(JacksonCodec(io.aftersound.weave.schema.samples.Beer,JSON))"
+            "BREWERY": "JacksonCodec(io.aftersound.weave.schema.samples.Brewery,JSON)",
+            "BEER": "JacksonCodec(io.aftersound.weave.schema.samples.Beer,JSON)"
           }
         }
       }
