@@ -104,7 +104,7 @@
       "io.aftersound.weave.service.cassandra3x.SessionFacadeServiceExecutor",
       "io.aftersound.weave.service.couchbase2x.CouchbaseServiceExecutor",
       "io.aftersound.weave.service.demo.DemoServiceExecutor",
-      "io.aftersound.weave.service.sample.GreetingServiceExecutor"
+      "io.aftersound.weave.sample.extension.service.GreetingServiceExecutor"
     ]
   }
 ]
