@@ -4,7 +4,7 @@
     "paramFields": [
       {
         "name": "p1",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -13,7 +13,7 @@
       },
       {
         "name": "name",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Query",
         "constraint": {
@@ -41,7 +41,7 @@
     "paramFields": [
       {
         "name": "p1",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Path",
         "multiValued": false,
         "constraint": {
@@ -50,7 +50,7 @@
       },
       {
         "name": "p2",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Path",
         "multiValued": false,
         "constraint": {
@@ -59,7 +59,7 @@
       },
       {
         "name": "type",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Query",
         "multiValued": false,
         "constraint": {
@@ -76,7 +76,7 @@
       },
       {
         "name": "country",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Query",
         "multiValued": false,
         "constraint": {
@@ -85,7 +85,7 @@
       },
       {
         "name": "state",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Query",
         "multiValued": false,
         "constraint": {
@@ -94,7 +94,7 @@
       },
       {
         "name": "zipcode",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Query",
         "multiValued": false,
         "constraint": {
@@ -103,7 +103,7 @@
       },
       {
         "name": "name",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Query",
         "multiValued": false,
         "constraint": {
@@ -112,7 +112,7 @@
       },
       {
         "name": "category",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Query",
         "multiValued": false,
         "constraint": {
@@ -121,7 +121,7 @@
       },
       {
         "name": "fetchCount",
-        "valueType": "Integer",
+        "valueSpec": "Integer",
         "type": "Query",
         "multiValued": false,
         "constraint": {
@@ -131,7 +131,7 @@
       },
       {
         "name": "skipCount",
-        "valueType": "Integer",
+        "valueSpec": "Integer",
         "type": "Query",
         "multiValued": false,
         "constraint": {

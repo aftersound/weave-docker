@@ -4,7 +4,7 @@
     "paramFields": [
       {
         "name": "p1",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Path",
         "multiValued": false,
         "constraint": {
@@ -13,7 +13,7 @@
       },
       {
         "name": "p2",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Path",
         "multiValued": false,
         "constraint": {
@@ -22,7 +22,7 @@
       },
       {
         "name": "action",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Query",
         "multiValued": false,
         "constraint": {
@@ -40,7 +40,7 @@
       },
       {
         "name": "namespace",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Query",
         "multiValued": false,
         "constraint": {
@@ -60,7 +60,7 @@
     "paramFields": [
       {
         "name": "p1",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Path",
         "multiValued": false,
         "constraint": {
@@ -69,7 +69,7 @@
       },
       {
         "name": "p2",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Path",
         "multiValued": false,
         "constraint": {
@@ -78,7 +78,7 @@
       },
       {
         "name": "action",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Query",
         "multiValued": false,
         "constraint": {
@@ -97,7 +97,7 @@
       },
       {
         "name": "namespace",
-        "valueType": "String",
+        "valueSpec": "String",
         "type": "Query",
         "multiValued": false,
         "constraint": {
@@ -106,7 +106,7 @@
       },
       {
         "name": "runtimeConfig",
-        "valueType": "com.fasterxml.jackson.databind.JsonNode",
+        "valueSpec": "com.fasterxml.jackson.databind.JsonNode",
         "type": "Body",
         "multiValued": false,
         "constraint": {
@@ -135,7 +135,7 @@
     "paramFields": [
       {
         "name": "path1",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -144,7 +144,7 @@
       },
       {
         "name": "path2",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -153,7 +153,7 @@
       },
       {
         "name": "action",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -162,7 +162,7 @@
       },
       {
         "name": "repository",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Query",
         "constraint": {
@@ -171,7 +171,7 @@
       },
       {
         "name": "groupId",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Query",
         "constraint": {
@@ -180,7 +180,7 @@
       },
       {
         "name": "artifactId",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Query",
         "constraint": {
@@ -189,7 +189,7 @@
       },
       {
         "name": "version",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Query",
         "constraint": {
@@ -207,7 +207,7 @@
     "paramFields": [
       {
         "name": "path1",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -216,7 +216,7 @@
       },
       {
         "name": "path2",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -225,7 +225,7 @@
       },
       {
         "name": "action",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -234,7 +234,7 @@
       },
       {
         "name": "groupId",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Query",
         "constraint": {
@@ -243,7 +243,7 @@
       },
       {
         "name": "artifactId",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Query",
         "constraint": {
@@ -252,7 +252,7 @@
       },
       {
         "name": "version",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Query",
         "constraint": {
@@ -270,7 +270,7 @@
     "paramFields": [
       {
         "name": "path1",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -279,7 +279,7 @@
       },
       {
         "name": "path2",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -288,7 +288,7 @@
       },
       {
         "name": "action",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -297,7 +297,7 @@
       },
       {
         "name": "repository",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Query",
         "constraint": {
@@ -306,7 +306,7 @@
       },
       {
         "name": "groupId",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Query",
         "constraint": {
@@ -315,7 +315,7 @@
       },
       {
         "name": "artifactId",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Query",
         "constraint": {
@@ -324,7 +324,7 @@
       },
       {
         "name": "version",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Query",
         "constraint": {
@@ -342,7 +342,7 @@
     "paramFields": [
       {
         "name": "path1",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -351,7 +351,7 @@
       },
       {
         "name": "path2",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -360,7 +360,7 @@
       },
       {
         "name": "action",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Query",
         "constraint": {
@@ -380,7 +380,7 @@
       },
       {
         "name": "id",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": true,
         "type": "Query",
         "constraint": {
@@ -389,7 +389,7 @@
       },
       {
         "name": "document",
-        "valueType": "com.fasterxml.jackson.databind.JsonNode",
+        "valueSpec": "com.fasterxml.jackson.databind.JsonNode",
         "multiValued": false,
         "type": "Body",
         "constraint": {
@@ -414,7 +414,7 @@
     "paramFields": [
       {
         "name": "path1",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -423,7 +423,7 @@
       },
       {
         "name": "path2",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -432,7 +432,7 @@
       },
       {
         "name": "path3",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -441,7 +441,7 @@
       },
       {
         "name": "path",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": true,
         "type": "Query",
         "constraint": {
@@ -450,7 +450,7 @@
       },
       {
         "name": "type",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": true,
         "type": "Query",
         "constraint": {
@@ -470,7 +470,7 @@
     "paramFields": [
       {
         "name": "path1",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -479,7 +479,7 @@
       },
       {
         "name": "path2",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -488,7 +488,7 @@
       },
       {
         "name": "path3",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -497,7 +497,7 @@
       },
       {
         "name": "path",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": true,
         "type": "Query",
         "constraint": {
@@ -506,7 +506,7 @@
       },
       {
         "name": "type",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": true,
         "type": "Query",
         "constraint": {
@@ -526,7 +526,7 @@
     "paramFields": [
       {
         "name": "path1",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -535,7 +535,7 @@
       },
       {
         "name": "path2",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -544,7 +544,7 @@
       },
       {
         "name": "path",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": true,
         "type": "Query",
         "constraint": {
@@ -553,7 +553,7 @@
       },
       {
         "name": "type",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": true,
         "type": "Query",
         "constraint": {
@@ -573,7 +573,7 @@
     "paramFields": [
       {
         "name": "path1",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -582,7 +582,7 @@
       },
       {
         "name": "path2",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": false,
         "type": "Path",
         "constraint": {
@@ -591,7 +591,7 @@
       },
       {
         "name": "path",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": true,
         "type": "Query",
         "constraint": {
@@ -600,7 +600,7 @@
       },
       {
         "name": "type",
-        "valueType": "String",
+        "valueSpec": "String",
         "multiValued": true,
         "type": "Query",
         "constraint": {
