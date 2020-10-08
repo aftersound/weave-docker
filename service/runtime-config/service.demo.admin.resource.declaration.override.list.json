@@ -29,12 +29,12 @@
     "ServiceExecutor": "io.aftersound.weave.service.couchbase2x.DocumentManagementServiceExecutor",
     "dependingResourceTypes": [
       {
-        "name": "admin.client.registry",
-        "type": "io.aftersound.weave.client.ClientRegistry"
+        "name": "admin.component.registry",
+        "type": "io.aftersound.weave.component.ComponentRegistry"
       },
       {
-        "name": "io.aftersound.weave.client.ClientRegistry",
-        "type": "io.aftersound.weave.client.ClientRegistry"
+        "name": "io.aftersound.weave.component.ComponentRegistry",
+        "type": "io.aftersound.weave.component.ComponentRegistry"
       }
     ]
   }

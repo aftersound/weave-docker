@@ -1,14 +1,15 @@
 [
   {
-    "scenario": "client.factory.types",
-    "baseType": "io.aftersound.weave.client.ClientFactory",
+    "scenario": "component.factory.types",
+    "baseType": "io.aftersound.weave.component.ComponentFactory",
     "extensionTypes": [
       "io.aftersound.weave.cassandra3x.CassandraClusterFactory",
       "io.aftersound.weave.cassandra3x.CassandraSessionFactory",
       "io.aftersound.weave.couchbase2x.CouchbaseClusterFactory",
       "io.aftersound.weave.couchbase2x.CouchbaseBucketFactory",
       "io.aftersound.weave.cr.ClassResourceFactory",
-      "io.aftersound.weave.fs.FileSystemFactory"
+      "io.aftersound.weave.fs.FileSystemFactory",
+      "io.aftersound.weave.zk.ZKManagerFactory"
     ]
   },
   {
@@ -55,10 +56,7 @@
     "baseType": "io.aftersound.weave.service.request.Deriver",
     "extensionTypes": [
       "io.aftersound.weave.service.request.AliasDeriver",
-      "io.aftersound.weave.service.request.Base64Deriver",
-      "io.aftersound.weave.service.request.MappingDeriver",
-      "io.aftersound.weave.service.request.TrimDeriver",
-      "io.aftersound.weave.service.request.ValueAtIndexDeriver"
+      "io.aftersound.weave.service.request.MappingDeriver"
     ]
   },
   {
@@ -74,12 +72,6 @@
     ]
   },
   {
-    "scenario": "admin.resource.manager.types",
-    "baseType": "io.aftersound.weave.resource.ResourceManager",
-    "extensionTypes": [
-    ]
-  },
-  {
     "scenario": "admin.service.executor.types",
     "baseType": "io.aftersound.weave.service.ServiceExecutor",
     "extensionTypes": [
@@ -89,12 +81,6 @@
       "io.aftersound.weave.service.management.fs.NamespaceManagementServiceExecutor",
       "io.aftersound.weave.service.management.fs.RuntimeConfigManagementServiceExecutor",
       "io.aftersound.weave.service.management.library.LibraryManagementServiceExecutor"
-    ]
-  },
-  {
-    "scenario": "resource.manager.types",
-    "baseType": "io.aftersound.weave.resource.ResourceManager",
-    "extensionTypes": [
     ]
   },
   {
