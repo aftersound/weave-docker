@@ -4,18 +4,18 @@
     "paramFields": [
       {
         "name": "p1",
-        "valueSpec": "String",
+        "type": "String",
         "multiValued": false,
-        "type": "Path",
+        "paramType": "Path",
         "constraint": {
           "type": "Required"
         }
       },
       {
         "name": "name",
-        "valueSpec": "String",
+        "type": "String",
         "multiValued": false,
-        "type": "Query",
+        "paramType": "Query",
         "constraint": {
           "type": "Required"
         }
@@ -41,27 +41,27 @@
     "paramFields": [
       {
         "name": "p1",
-        "valueSpec": "String",
+        "type": "String",
         "multiValued": false,
-        "type": "Path",
+        "paramType": "Path",
         "constraint": {
           "type": "Required"
         }
       },
       {
         "name": "data",
-        "valueSpec": "String",
+        "type": "String",
         "multiValued": false,
-        "type": "Query",
+        "paramType": "Query",
         "constraint": {
           "type": "Required"
         }
       },
       {
         "name": "name",
-        "valueSpec": "String",
+        "type": "String",
         "multiValued": false,
-        "type": "Derived",
+        "paramType": "Derived",
         "constraint": {
           "type": "Required"
         },
@@ -83,8 +83,8 @@
     "paramFields": [
       {
         "name": "p1",
-        "valueSpec": "String",
-        "type": "Path",
+        "type": "String",
+        "paramType": "Path",
         "multiValued": false,
         "constraint": {
           "type": "Required"
@@ -92,8 +92,8 @@
       },
       {
         "name": "p2",
-        "valueSpec": "String",
-        "type": "Path",
+        "type": "String",
+        "paramType": "Path",
         "multiValued": false,
         "constraint": {
           "type": "Required"
@@ -101,8 +101,8 @@
       },
       {
         "name": "type",
-        "valueSpec": "String",
-        "type": "Query",
+        "type": "String",
+        "paramType": "Query",
         "multiValued": false,
         "constraint": {
           "type": "Required"
@@ -118,8 +118,8 @@
       },
       {
         "name": "country",
-        "valueSpec": "String",
-        "type": "Query",
+        "type": "String",
+        "paramType": "Query",
         "multiValued": false,
         "constraint": {
           "type": "Optional"
@@ -127,8 +127,8 @@
       },
       {
         "name": "state",
-        "valueSpec": "String",
-        "type": "Query",
+        "type": "String",
+        "paramType": "Query",
         "multiValued": false,
         "constraint": {
           "type": "Optional"
@@ -136,8 +136,8 @@
       },
       {
         "name": "zipcode",
-        "valueSpec": "String",
-        "type": "Query",
+        "type": "String",
+        "paramType": "Query",
         "multiValued": false,
         "constraint": {
           "type": "Optional"
@@ -145,8 +145,8 @@
       },
       {
         "name": "name",
-        "valueSpec": "String",
-        "type": "Query",
+        "type": "String",
+        "paramType": "Query",
         "multiValued": false,
         "constraint": {
           "type": "Optional"
@@ -154,8 +154,8 @@
       },
       {
         "name": "category",
-        "valueSpec": "String",
-        "type": "Query",
+        "type": "String",
+        "paramType": "Query",
         "multiValued": false,
         "constraint": {
           "type": "Optional"
@@ -163,23 +163,23 @@
       },
       {
         "name": "fetchCount",
-        "valueSpec": "Integer",
-        "type": "Query",
+        "type": "Integer",
+        "valueFuncSpec": "TO_INTEGER(String,10)",
+        "paramType": "Query",
         "multiValued": false,
         "constraint": {
           "type": "Optional"
-        },
-        "defaultValue": "10"
+        }
       },
       {
         "name": "skipCount",
-        "valueSpec": "Integer",
-        "type": "Query",
+        "type": "Integer",
+        "valueFuncSpec": "TO_INTEGER(String,10)",
+        "paramType": "Query",
         "multiValued": false,
         "constraint": {
           "type": "Optional"
-        },
-        "defaultValue": "10"
+        }
       }
     ],
     "executionControl": {

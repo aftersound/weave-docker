@@ -33,6 +33,25 @@
     ]
   },
   {
+    "scenario": "value.func.factory.types",
+    "baseType": "io.aftersound.weave.value.ValueFuncFactory",
+    "extensionTypes": [
+      "io.aftersound.weave.value.ChainedFuncFactory",
+      "io.aftersound.weave.value.DecodeFuncFactory",
+      "io.aftersound.weave.value.EncodeFuncFactory",
+      "io.aftersound.weave.value.FormatDateFuncFactory",
+      "io.aftersound.weave.value.PassThroughFuncFactory",
+      "io.aftersound.weave.value.ToBooleanFuncFactory",
+      "io.aftersound.weave.value.ToDateFuncFactory",
+      "io.aftersound.weave.value.ToDoubleFuncFactory",
+      "io.aftersound.weave.value.ToFloatFuncFactory",
+      "io.aftersound.weave.value.ToIntegerFuncFactory",
+      "io.aftersound.weave.value.ToLongFuncFactory",
+      "io.aftersound.weave.value.ToShortFuncFactory",
+      "io.aftersound.weave.value.ToStringFuncFactory"
+    ]
+  },
+  {
     "scenario": "cache.factory.types",
     "baseType": "io.aftersound.weave.service.cache.CacheFactory",
     "extensionTypes": [
@@ -89,7 +108,7 @@
     "extensionTypes": [
       "io.aftersound.weave.service.cassandra3x.SessionFacadeServiceExecutor",
       "io.aftersound.weave.service.couchbase2x.CouchbaseServiceExecutor",
-      "io.aftersound.weave.service.demo.DemoServiceExecutor",
+      "io.aftersound.weave.service.echo.EchoServiceExecutor",
       "io.aftersound.weave.sample.extension.service.GreetingServiceExecutor"
     ]
   }
