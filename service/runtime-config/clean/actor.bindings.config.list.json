@@ -1,0 +1,111 @@
+[
+  {
+    "scenario": "component.factory.types",
+    "baseType": "io.aftersound.weave.component.ComponentFactory",
+    "extensionTypes": [
+      "io.aftersound.weave.cassandra3x.CassandraClusterFactory",
+      "io.aftersound.weave.cassandra3x.CassandraSessionFactory",
+      "io.aftersound.weave.couchbase2x.CouchbaseClusterFactory",
+      "io.aftersound.weave.couchbase2x.CouchbaseBucketFactory",
+      "io.aftersound.weave.cr.ClassResourceFactory",
+      "io.aftersound.weave.fs.FileSystemFactory",
+      "io.aftersound.weave.zk.ZKManagerFactory"
+    ]
+  },
+  {
+    "scenario": "codec.factory.types",
+    "baseType": "io.aftersound.weave.codec.CodecFactory",
+    "extensionTypes": [
+      "io.aftersound.weave.codec.ChainedCodecFactory",
+      "io.aftersound.weave.codec.JavaClassCodecFactory",
+      "io.aftersound.weave.codec.avro.AvroCodecFactory",
+      "io.aftersound.weave.codec.jackson.JacksonCodecFactory",
+      "io.aftersound.weave.codec.jackson.BsonJacksonCodecFactory",
+      "io.aftersound.weave.codec.jackson.SmileJacksonCodecFactory"
+    ]
+  },
+  {
+    "scenario": "value.func.factory.types",
+    "baseType": "io.aftersound.weave.value.ValueFuncFactory",
+    "extensionTypes": [
+      "io.aftersound.weave.value.ChainedFuncFactory",
+      "io.aftersound.weave.value.DecodeFuncFactory",
+      "io.aftersound.weave.value.EncodeFuncFactory",
+      "io.aftersound.weave.value.FormatDateFuncFactory",
+      "io.aftersound.weave.value.MappingFuncFactory",
+      "io.aftersound.weave.value.PassThroughFuncFactory",
+      "io.aftersound.weave.value.ToBooleanFuncFactory",
+      "io.aftersound.weave.value.ToBooleanListFuncFactory",
+      "io.aftersound.weave.value.ToDateFuncFactory",
+      "io.aftersound.weave.value.ToDateListFuncFactory",
+      "io.aftersound.weave.value.ToDoubleFuncFactory",
+      "io.aftersound.weave.value.ToDoubleListFuncFactory",
+      "io.aftersound.weave.value.ToFloatFuncFactory",
+      "io.aftersound.weave.value.ToFloatListFuncFactory",
+      "io.aftersound.weave.value.ToIntegerFuncFactory",
+      "io.aftersound.weave.value.ToIntegerListFuncFactory",
+      "io.aftersound.weave.value.ToLongFuncFactory",
+      "io.aftersound.weave.value.ToLongListFuncFactory",
+      "io.aftersound.weave.value.ToRangeFuncFactory",
+      "io.aftersound.weave.value.ToShortFuncFactory",
+      "io.aftersound.weave.value.ToShortListFuncFactory",
+      "io.aftersound.weave.value.ToStringFuncFactory",
+      "io.aftersound.weave.value.ToStringListFuncFactory",
+      "io.aftersound.weave.value.ValFuncFactory"
+    ]
+  },
+  {
+    "scenario": "cache.factory.types",
+    "baseType": "io.aftersound.weave.service.cache.CacheFactory",
+    "extensionTypes": [
+    ]
+  },
+  {
+    "scenario": "cache.key.generator.types",
+    "baseType": "io.aftersound.weave.service.cache.KeyGenerator",
+    "extensionTypes": [
+    ]
+  },
+  {
+    "scenario": "param.validator.types",
+    "baseType": "io.aftersound.weave.service.request.Validator",
+    "extensionTypes": [
+      "io.aftersound.weave.service.request.AllowedValuesValidator"
+    ]
+  },
+  {
+    "scenario": "param.deriver.types",
+    "baseType": "io.aftersound.weave.service.request.Deriver",
+    "extensionTypes": [
+      "io.aftersound.weave.service.request.AliasDeriver"
+    ]
+  },
+  {
+    "scenario": "auth.handler.types",
+    "baseType": "io.aftersound.weave.service.security.AuthHandler",
+    "extensionTypes": [
+    ]
+  },
+  {
+    "scenario": "admin.service.executor.types",
+    "baseType": "io.aftersound.weave.service.ServiceExecutor",
+    "extensionTypes": [
+      "io.aftersound.weave.service.couchbase2x.DocumentManagementServiceExecutor",
+      "io.aftersound.weave.service.discovery.OpenAPISpecServiceExecutor",
+      "io.aftersound.weave.service.discovery.ServiceMetadataServiceExecutor",
+      "io.aftersound.weave.service.management.fs.NamespaceManagementServiceExecutor",
+      "io.aftersound.weave.service.management.fs.RuntimeConfigManagementServiceExecutor",
+      "io.aftersound.weave.service.management.library.LibraryManagementServiceExecutor"
+    ]
+  },
+  {
+    "scenario": "service.executor.types",
+    "baseType": "io.aftersound.weave.service.ServiceExecutor",
+    "extensionTypes": [
+      "io.aftersound.weave.sample.extension.service.GreetingServiceExecutor",
+      "io.aftersound.weave.service.cassandra3x.SessionFacadeServiceExecutor",
+      "io.aftersound.weave.service.couchbase2x.CouchbaseServiceExecutor",
+      "io.aftersound.weave.service.echo.EchoServiceExecutor"
+    ]
+  }
+]

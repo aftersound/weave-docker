@@ -1,14 +1,18 @@
 [
   {
-    "id": "service.clean",
+    "id": "clean",
     "attributes": {}
   },
   {
-    "id": "service.demo",
+    "id": "demo",
     "attributes": {}
   },
   {
-    "id": "service.iot",
+    "id": "dev",
+    "attributes": {}
+  },
+  {
+    "id": "iot",
     "attributes": {}
   }
 ]

@@ -1,0 +1,46 @@
+[
+  {
+    "path": "/1.php",
+    "paramFields": [
+      {
+        "name": "p1",
+        "valueSpec": "String",
+        "multiValued": false,
+        "type": "Path",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "data",
+        "valueSpec": "String",
+        "multiValued": false,
+        "type": "Query",
+        "constraint": {
+          "type": "Required"
+        }
+      },
+      {
+        "name": "cmd",
+        "valueSpec": "String",
+        "multiValued": false,
+        "type": "Derived",
+        "constraint": {
+          "type": "Required"
+        },
+        "deriveControl": {
+          "from": "data",
+          "type": "Alias"
+        }
+      }
+    ],
+    "executionControl": {
+      "type": "IOTService",
+      "repository": {
+        "clientId": "hsqldb.datasource"
+      },
+      "selectSqlTemplate": "SELECT DATA FROM IOT_DATA WHERE ID='@{id}'",
+      "upsertSqlTemplate": "INSERT INTO IOT_DATA (ID,DATA) VALUES ('@{id}','@{data}') ON DUPLICATE KEY UPDATE DATA='@{data}'"
+    }
+  }
+]
