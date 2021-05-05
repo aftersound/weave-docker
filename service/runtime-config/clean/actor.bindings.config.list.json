@@ -13,18 +13,6 @@
     ]
   },
   {
-    "scenario": "codec.factory.types",
-    "baseType": "io.aftersound.weave.codec.CodecFactory",
-    "extensionTypes": [
-      "io.aftersound.weave.codec.ChainedCodecFactory",
-      "io.aftersound.weave.codec.JavaClassCodecFactory",
-      "io.aftersound.weave.codec.avro.AvroCodecFactory",
-      "io.aftersound.weave.codec.jackson.JacksonCodecFactory",
-      "io.aftersound.weave.codec.jackson.BsonJacksonCodecFactory",
-      "io.aftersound.weave.codec.jackson.SmileJacksonCodecFactory"
-    ]
-  },
-  {
     "scenario": "value.func.factory.types",
     "baseType": "io.aftersound.weave.value.ValueFuncFactory",
     "extensionTypes": [
@@ -71,13 +59,6 @@
     "baseType": "io.aftersound.weave.service.request.Validator",
     "extensionTypes": [
       "io.aftersound.weave.service.request.AllowedValuesValidator"
-    ]
-  },
-  {
-    "scenario": "param.deriver.types",
-    "baseType": "io.aftersound.weave.service.request.Deriver",
-    "extensionTypes": [
-      "io.aftersound.weave.service.request.AliasDeriver"
     ]
   },
   {

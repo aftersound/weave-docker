@@ -109,5 +109,11 @@
       "io.aftersound.weave.service.echo.EchoServiceExecutor",
       "io.aftersound.weave.service.iot.IOTServiceExecutor"
     ]
+  },
+  {
+    "scenario": "processor.factory.types",
+    "baseType": "io.aftersound.weave.process.ProcessorFactory",
+    "extensionTypes": [
+    ]
   }
 ]

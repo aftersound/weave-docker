@@ -9,19 +9,8 @@
       "io.aftersound.weave.couchbase2x.CouchbaseBucketFactory",
       "io.aftersound.weave.cr.ClassResourceFactory",
       "io.aftersound.weave.fs.FileSystemFactory",
-      "io.aftersound.weave.zk.ZKManagerFactory"
-    ]
-  },
-  {
-    "scenario": "codec.factory.types",
-    "baseType": "io.aftersound.weave.codec.CodecFactory",
-    "extensionTypes": [
-      "io.aftersound.weave.codec.ChainedCodecFactory",
-      "io.aftersound.weave.codec.JavaClassCodecFactory",
-      "io.aftersound.weave.codec.avro.AvroCodecFactory",
-      "io.aftersound.weave.codec.jackson.JacksonCodecFactory",
-      "io.aftersound.weave.codec.jackson.BsonJacksonCodecFactory",
-      "io.aftersound.weave.codec.jackson.SmileJacksonCodecFactory"
+      "io.aftersound.weave.zk.ZKManagerFactory",
+      "io.aftersound.weave.actor.ActorRegistryFactory"
     ]
   },
   {
@@ -103,9 +92,8 @@
     "baseType": "io.aftersound.weave.service.ServiceExecutor",
     "extensionTypes": [
       "io.aftersound.weave.sample.extension.service.GreetingServiceExecutor",
-      "io.aftersound.weave.service.cassandra3x.SessionFacadeServiceExecutor",
-      "io.aftersound.weave.service.couchbase2x.CouchbaseServiceExecutor",
-      "io.aftersound.weave.service.echo.EchoServiceExecutor"
+      "io.aftersound.weave.service.process.ProcessServiceExecutor",
+      "io.aftersound.weave.service.process.ProcessHubServiceExecutor"
     ]
   }
 ]
